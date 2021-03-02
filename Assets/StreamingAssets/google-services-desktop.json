@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "947773870757",
+    "firebase_url": "https://regions-absolut-default-rtdb.firebaseio.com",
+    "project_id": "regions-absolut",
+    "storage_bucket": "regions-absolut.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947773870757:android:d81f3d06beb22061ab734c",
+        "android_client_info": {
+          "package_name": "com.Tanottauro.com.unity.RegionsAbsolut"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947773870757-sk897aovv1fjj5popdllbm12ch5uirlb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvGIQdbD7qqJCtlf2uwAryaPyA71X6vqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947773870757-sk897aovv1fjj5popdllbm12ch5uirlb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
