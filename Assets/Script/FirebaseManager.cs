@@ -82,7 +82,7 @@ public class FirebaseManager : MonoBehaviour
             {
                 //If they are avalible Initialize Firebase
                 InitializeFirebase();
-                                
+
             }
             else
             {
@@ -371,7 +371,7 @@ public class FirebaseManager : MonoBehaviour
     private IEnumerator UpdateIronM(int _up)
     {
 
-        var DBTask = DBreference.Child("Users").Child(User.UserId).Child("UserInfo").Child("lvl").SetValueAsync(_up);
+        var DBTask = DBreference.Child("Users").Child(User.UserId).Child("MineResources").Child("Iron").SetValueAsync(_up);
 
         yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
 
