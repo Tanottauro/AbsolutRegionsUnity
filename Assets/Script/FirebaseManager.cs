@@ -8,7 +8,17 @@ using System.Linq;
 using TMPro;
 
 public class FirebaseManager : MonoBehaviour
-{    
+{  
+    [Header("Variaveis em geral")]
+
+    UIManager _UiManager;
+
+    [Header("Variaveis em geral")]
+    public GameObject semInternet;
+    private float CTemp;
+    public float tempoFechar;
+
+
     [Header("Variaveis do Firebase")]
     public DependencyStatus dependencyStatus;
     public FirebaseAuth auth;
@@ -74,6 +84,27 @@ public class FirebaseManager : MonoBehaviour
 
     void Awake()
     {
+        if (Application.internetReachability == NetworkReachability.NotReachable) // Aqui é verificado se não existe conexão
+        { 
+            Debug.Log ("Não há conexão!"); 
+
+            _UiManager.ClearScreen();
+            semInternet.SetActive(true);
+
+            CTemp += 1 * Time.deltaTime;
+
+            if(CTemp >= 1)
+            {
+                tempoFechar -= 1;
+                CTemp = 0;
+            }
+
+            if(tempoFechar <= 0)
+            {
+                Application.Quit();
+            }
+            
+        }
         //Check that all of the necessary dependencies for Firebase are present on the system
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
@@ -90,6 +121,8 @@ public class FirebaseManager : MonoBehaviour
             }
         });
     }
+
+
 
     private void InitializeFirebase()
     {
