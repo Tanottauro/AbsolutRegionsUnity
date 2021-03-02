@@ -81,8 +81,8 @@ public class FirebaseManager : MonoBehaviour
             if (dependencyStatus == DependencyStatus.Available)
             {
                 //If they are avalible Initialize Firebase
-                InitializeFirebase(); //tested
-                
+                InitializeFirebase();
+                                
             }
             else
             {
